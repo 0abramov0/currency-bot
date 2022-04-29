@@ -1,6 +1,5 @@
 from config import *
-from get_rate import *
-from key_rate import *
+from get_info import *
 from keyboards import *
 
 
@@ -12,7 +11,7 @@ def start(message):
 
 @bot.message_handler(content_types=['text'])
 def rate(message):
-    if message.text == 'Курс' + '\N{money bag}':
+    if message.text == 'Информация' + '\N{money bag}':
         bot.send_message(message.chat.id, get_course())
         bot.send_message(message.chat.id, get_key())
 
